@@ -50,3 +50,11 @@ body {
   flex-direction: column;
   gap: 2rem;
 }
+.widthdiv {
+  display: flex;
+  gap: 2rem;
+}
+.heightdiv {
+  display: flex;
+  gap: 1.5rem;
+}
