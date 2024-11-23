@@ -20,3 +20,12 @@ let borderRadius = document.querySelector(".borderradius");
 borderRadius.addEventListener("input", () => {
   box.style.borderRadius = `${borderRadius.value}px`;
 });
+
+let width = document.querySelector(".width");
+width.addEventListener("input", () => {
+  box.style.width = `${width.value}px`;
+});
+let height = document.querySelector(".height");
+height.addEventListener("input", () => {
+  box.style.height = `${height.value}px`;
+});
