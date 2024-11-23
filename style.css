@@ -1,0 +1,40 @@
+.container {
+  background-color: aqua;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+}
+.box {
+  height: 200px;
+  width: 200px;
+  border: 2px solid red;
+  z-index: 2;
+  margin: auto;
+  border-radius: 20px;
+}
+body {
+  color: white;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  font-family: "Poppins", sans-serif;
+}
+.sections {
+  display: flex;
+  gap: 2rem;
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+}
+
+.content {
+  cursor: pointer;
+  border: 2px solid white;
+  padding: 1rem;
+}
+.content a {
+  text-decoration: none;
+}
