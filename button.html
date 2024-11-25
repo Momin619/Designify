@@ -1,9 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="button.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Designify - Button</title>
   </head>
-  <body></body>
+  <body>
+    <button class="btn">hi there</button>
+    <div class="inputs">
+      <div class="widthbtn">
+        <label for="width">Width</label>
+        <input type="number" id="width" />
+      </div>
+      <div class="heightbtn">
+        <label for="height">Height</label>
+        <input type="number" id="height" />
+      </div>
+      <div class="bgbtn">
+        <label for="bg">Background color</label>
+        <input type="color" id="bgcolor" />
+      </div>
+      <div class="colorbtn">
+        <label for="color"> Color</label>
+        <input type="color" id="color" />
+      </div>
+      <div class="borderwidthbtn">
+        <label for="borderwidthbtn">Border width (px)</label>
+        <input type="number" id="borderwidthbtn" />
+      </div>
+      <div class="bordercolorbtn">
+        <label for="bordercolorbtn">Border color</label>
+        <input type="color" id="bordercolorbtn" />
+      </div>
+      <div class="borderradiusbtn">
+        <label for="borderradiusbtn">Border radius (px)</label>
+        <input type="number" id="borderradiusbtn" />
+      </div>
+      <div class="padding">
+        <label for="padding">Padding (px)</label>
+        <input type="number" id="padding" />
+      </div>
+      <div class="fontsize">
+        <label for="fontsize">Font size (px)</label>
+        <input type="number" id="fontsize" />
+      </div>
+      <div class="content">
+        <label for="content">Content</label>
+        <input type="text" id="content" />
+      </div>
+    </div>
+    <script>
+      let btn = document.querySelector(".btn");
+      let width = document.getElementById("width");
+      width.addEventListener("input", () => {
+        btn.style.width = `${width.value}px`;
+      });
+      let height = document.getElementById("height");
+      height.addEventListener("input", () => {
+        btn.style.height = `${height.value}px`;
+      });
+      let bgColor = document.getElementById("bgcolor");
+      bgColor.addEventListener("input", () => {
+        btn.style.backgroundColor = bgColor.value;
+      });
+      let borderwidth = document.getElementById("borderwidthbtn");
+      borderwidth.addEventListener("input", () => {
+        console.log(borderwidth.value);
+        btn.style.borderWidth = `${borderwidth.value}px`;
+      });
+      let border_Color = document.getElementById("bordercolorbtn");
+      border_Color.addEventListener("input", () => {
+        console.log(border_Color.value);
+        btn.style.borderColor = border_Color.value;
+      });
+      let borderRadius = document.getElementById("borderradiusbtn");
+      borderRadius.addEventListener("input", () => {
+        btn.style.borderRadius = `${borderRadius.value}px`;
+      });
+      let padding = document.getElementById("padding");
+      padding.addEventListener("input", () => {
+        btn.style.padding = `${padding.value}px`;
+      });
+      let fontSize = document.getElementById("fontsize");
+      fontSize.addEventListener("input", () => {
+        btn.style.fontSize = `${fontSize.value}px`;
+      });
+      let content = document.getElementById("content");
+      content.addEventListener("input", () => {
+        btn.innerHTML = content.value;
+      });
+      let color = document.getElementById("color");
+      color.addEventListener("input", () => {
+        btn.style.color = color.value;
+        console.log(color.value);
+      });
+    </script>
+  </body>
 </html>

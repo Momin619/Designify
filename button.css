@@ -1,0 +1,33 @@
+body {
+  background-color: aqua;
+  font-family: "Poppins", sans-serif;
+}
+button {
+  display: block;
+  margin: auto;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  border: 2px solid red;
+}
+
+input:not([type="color"]) {
+  padding: 0.3rem;
+}
+.inputs {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background-color: transparent;
+  border: 1px solid white;
+  width: 30%;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 2;
+  left: 35%;
+  top: 25%;
+}
