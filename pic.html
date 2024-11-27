@@ -1,9 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="./pic.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Designify - Pic</title>
   </head>
-  <body></body>
+  <body>
+    <label for="pic" class="file-input-button">Upload a Pic</label>
+    <input type="file" name="" id="pic" / >
+    <div class="container"><img src="" alt="" / class="image"></div>
+    <div class="inputs">
+      <div class="heightdiv">
+        <label for="height">Height (px)</label>
+        <input type="number" / class="height" id="height">
+      </div>
+      <div class="widthdiv">
+        <label for="width">Width (px)</label>
+        <input type="number" name="" id="width" / class="width">
+      </div>
+
+      <div class="borderwidthdiv">
+        <label for="border">Border</label>
+        <input type="number" name="border" id="border" / class="border">
+      </div>
+      <div class="bordercolordiv">
+        <label for="bordercolor">Border color</label>
+        <input type="color" / class="bordercolor" id="bordercolor">
+      </div>
+      <div class="border-radiusdiv">
+        <label for="borderradius">Border radius (px)</label>
+        <input type="number" class="borderradius" id="borderradius" />
+      </div>
+      <div class="rotate">
+        <div class="leftrotate">
+          <label for="">Rotate Right</label
+          ><i class="bi bi-arrow-clockwise"></i>
+        </div>
+        <div class="rightrotate">
+          <label for="">Rotate Left</label>
+          <i class="bi bi-arrow-counterclockwise"></i>
+        </div>
+      </div>
+      <div class="filters">
+        <div class="opacitydiv">
+          <label for="opacity">Opacity</label>
+          <input type="number" name="" id="opacity" class="opacity" />
+        </div>
+        <div class="brightnessdiv">
+          <label for="brightness">Brightness</label>
+          <input type="number" id="brightness" class="brightness" />
+        </div>
+        <div class="blurdiv">
+          <label for="blur">Blur</label>
+          <input type="number" name="" id="blur" class="blur" />
+        </div>
+        <div class="huediv">
+          <label for="hue">Hue</label>
+          <input type="number" name="" id="hue" class="hue" />
+        </div>
+        <div class="contrastdiv"></div>
+        <div class="sepiadiv"></div>
+        <div class="shadowdiv"></div>
+        <div class="grayscalediv"></div>
+        <div class="saturationdiv"></div>
+      </div>
+    </div>
+
+    <script>
+      let input = document.getElementById("pic");
+      let container = document.querySelector(".container");
+      let img = document.querySelector(".image");
+      let height = document.querySelector(".height");
+      let width = document.querySelector(".width");
+      let border = document.querySelector(".border");
+      let border_1 = document.querySelector(".bordercolor");
+      let borderradius = document.querySelector(".borderradius");
+      let opacity = document.querySelector(".opacity");
+      let brightness = document.querySelector(".brightness");
+      let blur = document.querySelector(".blur");
+      let hue = document.querySelector(".hue");
+
+      input.addEventListener("input", (e) => {
+        let file = e.target.files[0]; // Get the selected file
+        if (file) {
+          let contenturl = URL.createObjectURL(file); // Create a URL for the file
+          console.log(contenturl);
+
+          // Optional: Display the image in the container
+          img.src = contenturl;
+          // Set the image source to the file URL
+        }
+        height.addEventListener("input", () => {
+          img.style.height = `${height.value}px`;
+          console.log(height.value);
+        });
+        width.addEventListener("input", () => {
+          img.style.width = `${width.value}px`;
+          console.log(height.value);
+        });
+        border.addEventListener("input", () => {
+          img.style.borderWidth = `${border.value}px`;
+          console.log(border.value);
+        });
+        border_1.addEventListener("input", () => {
+          img.style.borderColor = border_1.value;
+          console.log(border_1.value);
+        });
+        borderradius.addEventListener("input", () => {
+          img.style.borderRadius = `${borderradius.value}px`;
+        });
+
+        //
+        let rotateno = 0;
+        let left = document.querySelector(".bi-arrow-clockwise");
+        left.addEventListener("click", () => {
+          rotateno++;
+          img.style.rotate = `${rotateno}deg`;
+        });
+        let right = document.querySelector(".bi-arrow-counterclockwise");
+        right.addEventListener("click", () => {
+          rotateno--;
+          img.style.rotate = `${rotateno}deg`;
+        });
+        opacity.addEventListener("input", () => {
+          img.style.filter = `opacity(${opacity.value})`;
+        });
+
+        brightness.addEventListener("input", () => {
+          img.style.filter = `brightness(${brightness.value})`;
+        });
+
+        blur.addEventListener("input", () => {
+          img.style.filter = `blur(${blur.value}px)`;
+        });
+
+        hue.addEventListener("input", () => {
+          img.style.filter = `hue-rotate(${hue.value}deg)`;
+        });
+      });
+    </script>
+  </body>
 </html>

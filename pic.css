@@ -1,0 +1,50 @@
+body {
+  background-color: aqua;
+  font-family: "Poppins", sans-serif;
+}
+.container img {
+  border: 2px solid red;
+}
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: max-content;
+
+  height: max-content;
+}
+/* Hide the default file input */
+/* Hide the default file input */
+input[type="file"] {
+  display: none;
+}
+
+/* Style the label to make it look like a button */
+.file-input-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: blue;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.file-input-button:hover {
+  background-color: #45a049;
+}
+
+.file-input-button:active {
+  background-color: #3e8e41;
+}
+
+/* Optional: Add custom styles for the image preview */
+.image {
+  margin-top: 10px;
+  max-width: 100%;
+  height: auto;
+}
