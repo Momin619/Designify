@@ -31,3 +31,12 @@ input:not([type="color"]) {
   left: 35%;
   top: 25%;
 }
+.codepen {
+  width: 100%;
+  height: max-content;
+  position: absolute;
+  top: 120%;
+  border: 2px solid white;
+  padding: 1rem;
+  z-index: 45;
+}

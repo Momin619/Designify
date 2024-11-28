@@ -50,48 +50,110 @@
         <input type="text" id="content" />
       </div>
     </div>
+    <div class="codepen">
+      <div class="widthinfodiv">
+        <p>Width (px)</p>
+        <p class="widthinfo"></p>
+      </div>
+      <div class="heightinfodiv">
+        <p>Height (px)</p>
+        <p class="heightinfo"></p>
+      </div>
+      <div class="colorinfodiv">
+        <p>Color</p>
+        <p class="colorinfo"></p>
+      </div>
+      <div class="backgroundcolordiv">
+        <p>Background color</p>
+        <p class="backgroundinfo"></p>
+      </div>
+      <div class="borderwidthinfodiv">
+        <p>Border width (px)</p>
+        <p class="borderwidthinfo"></p>
+      </div>
+      <div class="bordercolorinfodiv">
+        <p>Border color</p>
+        <p class="bordercolorinfo"></p>
+      </div>
+      <div class="borderradiusinfodiv">
+        <p>Border radius</p>
+        <p class="borderradiusinfo"></p>
+      </div>
+      <div class="paddinginfodiv">
+        <p>Padding (px)</p>
+        <p class="paddinginfo"></p>
+      </div>
+      <div class="fontsizeinfodiv">
+        <p>Font size (px)</p>
+        <p class="fontsizeinfo"></p>
+      </div>
+      <div class="contentinfodiv">
+        <p>Content</p>
+        <p class="contentinfo"></p>
+      </div>
+    </div>
     <script>
       let btn = document.querySelector(".btn");
       let width = document.getElementById("width");
       width.addEventListener("input", () => {
+        let widthinfo = document.querySelector(".widthinfo");
+        widthinfo.innerHTML = width.value;
         btn.style.width = `${width.value}px`;
       });
       let height = document.getElementById("height");
+
       height.addEventListener("input", () => {
+        let heightinfo = document.querySelector(".heightinfo");
+        heightinfo.innerHTML = height.value;
         btn.style.height = `${height.value}px`;
       });
       let bgColor = document.getElementById("bgcolor");
       bgColor.addEventListener("input", () => {
+        backgroundinfo.innerHTML = bgColor.value;
         btn.style.backgroundColor = bgColor.value;
       });
       let borderwidth = document.getElementById("borderwidthbtn");
       borderwidth.addEventListener("input", () => {
+        let borderwidthinfo = document.querySelector(".borderwidthinfo");
+        borderwidthinfo.innerHTML = borderwidth.value;
         console.log(borderwidth.value);
         btn.style.borderWidth = `${borderwidth.value}px`;
       });
       let border_Color = document.getElementById("bordercolorbtn");
       border_Color.addEventListener("input", () => {
+        let bordercolorinfo = document.querySelector(".bordercolorinfo");
+        bordercolorinfo.innerHTML = border_Color.value;
         console.log(border_Color.value);
         btn.style.borderColor = border_Color.value;
       });
       let borderRadius = document.getElementById("borderradiusbtn");
       borderRadius.addEventListener("input", () => {
+        let borderradiusinfo = document.querySelector(".borderradiusinfo");
+        borderradiusinfo.innerHTML = borderRadius.value;
         btn.style.borderRadius = `${borderRadius.value}px`;
       });
       let padding = document.getElementById("padding");
       padding.addEventListener("input", () => {
+        let paddinginfo = document.querySelector(".paddinginfo");
+        paddinginfo.innerHTML = padding.value;
         btn.style.padding = `${padding.value}px`;
       });
       let fontSize = document.getElementById("fontsize");
       fontSize.addEventListener("input", () => {
+        let fontsizeinfo = document.querySelector(".fontsizeinfo");
+        fontsizeinfo.innerHTML = fontSize.value;
         btn.style.fontSize = `${fontSize.value}px`;
       });
       let content = document.getElementById("content");
       content.addEventListener("input", () => {
+        let contentinfo = document.querySelector(".contentinfo");
+        contentinfo.innerHTML = content.value;
         btn.innerHTML = content.value;
       });
       let color = document.getElementById("color");
       color.addEventListener("input", () => {
+        let colorinfo = document.querySelector(".colorinfo");
+        colorinfo.innerHTML = color.value;
         btn.style.color = color.value;
         console.log(color.value);
       });
